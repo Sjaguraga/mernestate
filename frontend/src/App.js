@@ -1,10 +1,18 @@
+import { Container } from "react-bootstrap";
+import { Outlet } from "react-router";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
     <>
       <Header />
-      <div>Welcome to Mernestate</div>
+      <main className="py-3">
+        <Container>
+          <Outlet />
+        </Container>
+      </main>
+      <Footer />
     </>
   );
 };
